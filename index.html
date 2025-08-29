@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>XYZ University Reference Submission</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    fieldset { margin-bottom: 1.5em; }
+    legend { font-weight: bold; }
+    label { display: block; margin-top: 0.5em; }
+    input, textarea, select { width: 100%; padding: 0.4em; margin-top: 0.2em; }
+    button { padding: 0.6em 1.2em; font-size: 1em; }
+  </style>
+</head>
+<body>
+
+  <h1>Reference Letter & Evaluation</h1>
+  <form method="post" action="/submit_reference" enctype="multipart/form-data">
+    
+    <fieldset>
+      <legend>Reference Details</legend>
+      <label>
+        Your Name
+        <input type="text" name="ref_name" required>
+      </label>
+      <label>
+        Your Email
+        <input type="email" name="ref_email" required>
+      </label>
+      <label>
+        Applicant’s Name
+        <input type="text" name="applicant_name" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Letter of Recommendation</legend>
+      <label>
+        Upload Letter (PDF)
+        <input type="file" name="letter_upload" accept="application/pdf" required>
+      </label>
+      <label>
+        If you prefer to paste text instead:
+        <textarea name="letter_text" rows="10"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Evaluation Questions</legend>
+      <ol>
+        <li>
+          <label>
+            How long and in what capacity have you known the applicant?
+            <textarea name="q1" rows="3" required></textarea>
+          </label>
+        </li>
+        <li>
+          <label>
+            Describe the applicant’s strongest research qualities.
+            <textarea name="q2" rows="3" required></textarea>
+          </label>
+        </li>
+        <li>
+          <label>
+            In what areas could the applicant improve?
+            <textarea name="q3" rows="3" required></textarea>
+          </label>
+        </li>
+        <li>
+          <label>
+            How well does the applicant work in a team or collaborative setting?
+            <textarea name="q4" rows="3" required></textarea>
+          </label>
+        </li>
+        <li>
+          <label>
+            Any additional comments?
+            <textarea name="q5" rows="3"></textarea>
+          </label>
+        </li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend>Overall Rating</legend>
+      <label>
+        Please rate the applicant on a scale of 1 (lowest) to 5 (highest):
+        <select name="rating" required>
+          <option value="">— select —</option>
+          <option value="1">1 – Poor</option>
+          <option value="2">2 – Fair</option>
+          <option value="3">3 – Good</option>
+          <option value="4">4 – Very Good</option>
+          <option value="5">5 – Outstanding</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <button type="submit">Submit Reference</button>
+  </form>
+
+</body>
+</html>
