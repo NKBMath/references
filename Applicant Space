@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>XYZ University Postdoc Application</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    fieldset { margin-bottom: 1.5em; }
+    legend { font-weight: bold; }
+    label { display: block; margin-top: 0.5em; }
+    input, textarea, select { width: 100%; padding: 0.4em; margin-top: 0.2em; }
+    .reference { border: 1px solid #ccc; padding: 1em; margin-bottom: 1em; }
+    button { padding: 0.6em 1.2em; font-size: 1em; }
+  </style>
+</head>
+<body>
+
+  <h1>Postdoctoral Application — XYZ University</h1>
+  <form method="post" action="/submit_applicant" enctype="multipart/form-data">
+    
+    <fieldset>
+      <legend>Applicant Information</legend>
+      <label>
+        Full Name  
+        <input type="text" name="applicant_name" required>
+      </label>
+      <label>
+        Current Address
+        <textarea name="applicant_address" rows="3" required></textarea>
+      </label>
+      <label>
+        Email
+        <input type="email" name="applicant_email" required>
+      </label>
+      <label>
+        Phone Number
+        <input type="tel" name="applicant_phone">
+      </label>
+      <label>
+        Curriculum Vitae (PDF)
+        <input type="file" name="cv_upload" accept="application/pdf" required>
+      </label>
+      <label>
+        Cover Letter (PDF)
+        <input type="file" name="cover_letter" accept="application/pdf">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Education History</legend>
+      <label>
+        Highest Degree Earned
+        <input type="text" name="edu_degree" placeholder="e.g., Ph.D. in Physics" required>
+      </label>
+      <label>
+        Institution
+        <input type="text" name="edu_institution" required>
+      </label>
+      <label>
+        Year of Graduation
+        <input type="number" name="edu_year" min="1900" max="2100" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>References (3 Required)</legend>
+      <!-- Repeat this block three times, or generate dynamically via JS -->
+      <div class="reference">
+        <h4>Reference 1</h4>
+        <label>
+          Name
+          <input type="text" name="ref1_name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="ref1_email" required>
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="ref1_phone">
+        </label>
+      </div>
+
+      <div class="reference">
+        <h4>Reference 2</h4>
+        <label>
+          Name
+          <input type="text" name="ref2_name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="ref2_email" required>
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="ref2_phone">
+        </label>
+      </div>
+
+      <div class="reference">
+        <h4>Reference 3</h4>
+        <label>
+          Name
+          <input type="text" name="ref3_name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="ref3_email" required>
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="ref3_phone">
+        </label>
+      </div>
+    </fieldset>
+
+    <button type="submit">Submit Application</button>
+  </form>
+
+</body>
+</html>
